@@ -10,11 +10,15 @@ const Differentials = () => (
       <h2 className="text-3xl font-bold mb-6 text-center">Diferenciais</h2>
       <ul className="grid gap-4 md:grid-cols-3">
         {items.map((item) => (
-          <li key={item} className="bg-secondary p-4 rounded text-offwhite text-center">{item}</li>
+          <li
+            key={item}
+            className="bg-secondary p-4 rounded text-offwhite text-center"
+          >
+            {item}
+          </li>
         ))}
       </ul>
     </div>
   </section>
 );
-
 export default Differentials;

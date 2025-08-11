@@ -13,9 +13,9 @@ import FAQ from '../components/FAQ';
 import Footer from '../components/Footer';
 import CTAWhatsApp from '../components/CTAWhatsApp';
 
-const coletaImg = 'https://via.placeholder.com/400x300?text=Coleta';
-const brindesImg = 'https://via.placeholder.com/400x300?text=Brindes';
-const malotesImg = 'https://via.placeholder.com/400x300?text=Malotes';
+import coletaImg from '../assets/coleta.png';
+import brindesImg from '../assets/brindes.png';
+import malotesImg from '../assets/malotes.png';
 
 const jsonLd = {
   '@context': 'https://schema.org',
@@ -31,22 +31,30 @@ const Home = () => (
       <title>AVM Express - Entregas Rápidas</title>
       <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
     </Helmet>
+
     <Navbar />
     <Hero />
+
     <Differentials />
     <ServicesGridImage />
+
     <section className="py-12 max-w-6xl mx-auto grid gap-4 md:grid-cols-3">
       <ServiceCard image={coletaImg} title="Coleta" description="Retiramos no local que você precisar." />
       <ServiceCard image={brindesImg} title="Entrega de Brindes" description="Soluções para ações promocionais." />
       <ServiceCard image={malotesImg} title="Banco/Malotes" description="Transporte seguro de valores." />
     </section>
+
     <Steps />
     <Stats />
     <Testimonials />
     <PricingTable />
     <CoverageMap />
     <FAQ />
-    <div className="py-12 text-center"><CTAWhatsApp /></div>
+
+    <div className="py-12 text-center">
+      <CTAWhatsApp />
+    </div>
+
     <Footer />
   </>
 );

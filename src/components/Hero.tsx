@@ -1,7 +1,6 @@
 import CTAWhatsApp from './CTAWhatsApp';
 import { motion } from 'framer-motion';
-
-const envioImg = 'https://via.placeholder.com/800x600?text=Envio+Expresso';
+import envioImg from '../assets/envio-expresso.jpeg';
 
 const Hero = () => (
   <section className="bg-primary text-offwhite">
@@ -17,13 +16,14 @@ const Hero = () => (
         <p className="mb-6">Logística ágil para o seu negócio.</p>
         <CTAWhatsApp />
       </div>
+
       <motion.img
         src={envioImg}
         alt="Motoboy correndo"
-        className="flex-1 w-full h-auto"
         loading="lazy"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
+        className="w-full max-w-[560px] h-auto object-contain rounded-2xl shadow-lg md:ml-auto"
       />
     </div>
   </section>

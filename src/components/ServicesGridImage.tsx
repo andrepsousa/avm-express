@@ -1,8 +1,15 @@
-const gridImg = 'https://via.placeholder.com/1200x600?text=AVM+Express+Servicos';
+import gridImg from '../assets/grid-servicos.png';
 
 const ServicesGridImage = () => (
   <section className="py-12">
-    <img src={gridImg} alt="AVM Express serviços" className="w-full h-auto" loading="lazy" />
+    <div className="max-w-6xl mx-auto">
+      <img
+        src={gridImg}
+        alt="AVM Express serviços"
+        className="w-full h-auto rounded-lg shadow"
+        loading="lazy"
+      />
+    </div>
   </section>
 );
 
