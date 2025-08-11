@@ -3,4 +3,4 @@
 @tailwind utilities;
 
 html { @apply scroll-smooth; }
-body { @apply bg-white text-primary font-sans antialiased; }
+body { @apply bg-primary text-offwhite font-sans antialiased; }

@@ -5,17 +5,15 @@ interface Props {
 }
 
 const ServiceCard = ({ image, title, description }: Props) => (
-  <div className="bg-white rounded-lg overflow-hidden shadow hover:shadow-lg transition">
+  <div className="bg-secondary p-4 rounded shadow text-offwhite">
     <img
       src={image}
       alt={title}
-      className="w-full h-40 object-cover"
+      className="w-full h-40 object-cover mb-3 rounded"
       loading="lazy"
     />
-    <div className="p-4">
-      <h3 className="text-lg font-bold text-primary mb-2">{title}</h3>
-      <p className="text-sm text-gray-600">{description}</p>
-    </div>
+    <h3 className="text-lg font-semibold mb-1">{title}</h3>
+    <p className="text-sm">{description}</p>
   </div>
 );
 

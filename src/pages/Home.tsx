@@ -13,9 +13,9 @@ import FAQ from '../components/FAQ';
 import Footer from '../components/Footer';
 import CTAWhatsApp from '../components/CTAWhatsApp';
 
-const coletaImg = '/src/assets/coleta.png';
-const brindesImg = '/src/assets/brindes.png';
-const malotesImg = '/src/assets/malotes.png';
+import coletaImg from '../assets/coleta.png';
+import brindesImg from '../assets/brindes.png';
+import malotesImg from '../assets/malotes.png';
 
 const jsonLd = {
   '@context': 'https://schema.org',
@@ -31,40 +31,32 @@ const Home = () => (
       <title>AVM Express - Entregas Rápidas</title>
       <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
     </Helmet>
+
     <Navbar />
     <Hero />
-      <Differentials />
-      <ServicesGridImage />
-      <section className="py-12 bg-gray-50">
-        <div className="max-w-6xl mx-auto px-4 grid gap-8 md:grid-cols-3">
-          <ServiceCard
-            image={coletaImg}
-            title="Coleta"
-            description="Retiramos no local que você precisar."
-          />
-          <ServiceCard
-            image={brindesImg}
-            title="Entrega de Brindes"
-            description="Soluções para ações promocionais."
-          />
-          <ServiceCard
-            image={malotesImg}
-            title="Banco/Malotes"
-            description="Transporte seguro de valores."
-          />
-        </div>
-      </section>
-      <Steps />
-      <Stats />
-      <Testimonials />
-      <PricingTable />
-      <CoverageMap />
-      <FAQ />
-      <div className="py-12 text-center">
-        <CTAWhatsApp />
-      </div>
-      <Footer />
-    </>
-  );
+
+    <Differentials />
+    <ServicesGridImage />
+
+    <section className="py-12 max-w-6xl mx-auto grid gap-4 md:grid-cols-3">
+      <ServiceCard image={coletaImg} title="Coleta" description="Retiramos no local que você precisar." />
+      <ServiceCard image={brindesImg} title="Entrega de Brindes" description="Soluções para ações promocionais." />
+      <ServiceCard image={malotesImg} title="Banco/Malotes" description="Transporte seguro de valores." />
+    </section>
+
+    <Steps />
+    <Stats />
+    <Testimonials />
+    <PricingTable />
+    <CoverageMap />
+    <FAQ />
+
+    <div className="py-12 text-center">
+      <CTAWhatsApp />
+    </div>
+
+    <Footer />
+  </>
+);
 
 export default Home;

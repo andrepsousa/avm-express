@@ -4,17 +4,14 @@ const testimonials = [
 ];
 
 const Testimonials = () => (
-  <section className="py-12 bg-gray-50">
-    <div className="max-w-4xl mx-auto px-4">
+  <section className="py-12 bg-primary text-offwhite">
+    <div className="max-w-4xl mx-auto">
       <h2 className="text-3xl font-bold mb-6 text-center">Depoimentos</h2>
-      <div className="space-y-4">
+      <div className="space-y-6">
         {testimonials.map((t) => (
-          <blockquote
-            key={t.author}
-            className="border-l-4 border-accent pl-4 text-primary"
-          >
+          <blockquote key={t.author} className="border-l-4 border-accent pl-4">
             <p>{t.text}</p>
-            <footer className="mt-2 text-sm text-gray-600">— {t.author}</footer>
+            <footer className="mt-2 text-sm">{t.author}</footer>
           </blockquote>
         ))}
       </div>

@@ -8,7 +8,8 @@ Site responsivo desenvolvido com Vite, React e Tailwind CSS.
 - `npm run build`
 
 ## Variáveis de Ambiente
-Copie o arquivo `.env.example` para `.env` e preencha os valores desejados:
+Crie um arquivo `.env` com:
+VITE_WHATSAPP_NUMBER=55XXXXXXXXXXX
+VITE_API_BASE_URL=https://api.avmexpress.com.br
 
-- `VITE_WHATSAPP_NUMBER`
-- `VITE_API_BASE_URL`
+> O app só lê chaves que começam com `VITE_`. Reinicie o dev server após mudar o `.env`.
